@@ -1,20 +1,66 @@
 package com.hemebiotech.analytics;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.FileWriter;
+import java.util.List;
+import java.util.Map;
+
+/**
+ * This class calls on other classes and methods in order to launch the execution
+ * @author azo4218
+ *
+ */
 
 public class AnalyticsCounter {
-	private static int headacheCount = 0;	// initialize to 0
-	private static int rashCount = 0;		// initialize to 0
-	private static int pupilCount = 0;		// initialize to 0
+
 	
 	public static void main(String args[]) throws Exception {
-		// first get input
-		BufferedReader reader = new BufferedReader (new FileReader("symptoms.txt"));
+		
+
+		
+        ReadSymptomDataFromFile readSymptoms = new ReadSymptomDataFromFile("../Project_DA_Java_EN_Come_to_the_Rescue_of_a_Java_Application/Project02Eclipse/symptoms.txt");         
+        List<String> nameOfSymptoms = readSymptoms.getSymptoms();   
+        SymptomsCount symptomsCount = new SymptomsCount();
+        Map<String, Integer> SymptomsCount = symptomsCount.getsymptomsCount(nameOfSymptoms);
+        WriteSymptoms writeSymptoms = new WriteSymptoms();
+        writeSymptoms.writeSymptomsInFile(SymptomsCount);
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		/**			// first get input
+		BufferedReader reader = new BufferedReader (new FileReader("../Project_DA_Java_EN_Come_to_the_Rescue_of_a_Java_Application/Project02Eclipse/symptoms.txt"));
+		ArrayList <String> list = new ArrayList<String>();
+	
+		while (reader.readLine() != null) {
+			   list.add(reader.readLine());    
+			}
+	
+		 // list.forEach((n) -> System.out.println(n));
+		
+		list.stream()
+		 .collect(Collectors.groupingBy(s -> s))
+	      .forEach((k, v) -> System.out.println(k+" "+ count(v)));
+		
 		String line = reader.readLine();
 
-		int i = 0;	// set i to 0
+	int i = 0;	// set i to 0
 		int headCount = 0;	// counts headaches
 		while (line != null) {
 			i++;	// increment i
@@ -31,7 +77,8 @@ public class AnalyticsCounter {
 			}
 
 			line = reader.readLine();	// get another symptom
-		}
+		}  
+
 		
 		// next generate output
 		FileWriter writer = new FileWriter ("result.out");
@@ -39,5 +86,12 @@ public class AnalyticsCounter {
 		writer.write("rash: " + rashCount + "\n");
 		writer.write("dialated pupils: " + pupilCount + "\n");
 		writer.close();
+	}
+
+	private static String count(List<String> v) {
+		// TODO Auto-generated method stub
+		return null;`  **/ 
+        
+        
 	}
 }

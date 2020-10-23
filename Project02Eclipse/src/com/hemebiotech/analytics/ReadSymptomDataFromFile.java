@@ -7,30 +7,34 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Simple brute force implementation
- *
+ * Class which allows to recover an external file 
+ * and to be able to read its content and create a list of symptoms
+ * 
+ * @author Abdelnour Zouari
+ * 
  */
+
 public class ReadSymptomDataFromFile implements ISymptomReader {
 
 	private String filepath;
+
 	
-	/**
-	 * 
-	 * @param filepath a full or partial path to file with symptom strings in it, one per line
-	 */
-	public ReadSymptomDataFromFile (String filepath) {
+	
+	public ReadSymptomDataFromFile(String filepath) {
 		this.filepath = filepath;
 	}
-	
-	@Override
-	public List<String> GetSymptoms() {
+	/**
+	 * read symptoms in a file and create a list of symptoms 
+	 * 
+	 */ 
+	public List<String> getSymptoms() {
 		ArrayList<String> result = new ArrayList<String>();
-		
+		System.out.println(result);
 		if (filepath != null) {
 			try {
-				BufferedReader reader = new BufferedReader (new FileReader(filepath));
+				BufferedReader reader = new BufferedReader(new FileReader(filepath));
 				String line = reader.readLine();
-				
+
 				while (line != null) {
 					result.add(line);
 					line = reader.readLine();
@@ -40,7 +44,7 @@ public class ReadSymptomDataFromFile implements ISymptomReader {
 				e.printStackTrace();
 			}
 		}
-		
+
 		return result;
 	}
 
