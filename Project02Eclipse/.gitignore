@@ -1,0 +1,8 @@
+diff --git a/.gitignore b/.gitignore
+new file mode 100644
+index 0000000..ae3c172
+--- /dev/null
++++ b/.gitignore
+@@ -0,0 +1 @@
++/bin/
++/doc/
