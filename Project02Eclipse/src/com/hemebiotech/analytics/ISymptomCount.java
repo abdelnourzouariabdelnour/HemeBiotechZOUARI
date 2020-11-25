@@ -18,6 +18,6 @@ public interface ISymptomCount {
 	 * @return Map<String, Integer>
 	 */
 	
-	 Map<String, Integer> getsymptomsCount(List<String> nameOfSymptoms);
+	 Map<String, Integer> getSymptomsCount(List<String> nameOfSymptoms);
 
 }

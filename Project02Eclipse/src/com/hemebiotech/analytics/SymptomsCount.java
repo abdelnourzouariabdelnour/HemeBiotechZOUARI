@@ -29,10 +29,10 @@ public class SymptomsCount implements ISymptomCount {
 	 * 
 	 */
 
-    public Map<String, Integer> getsymptomsCount(List<String> nameOfSymptoms) {
+    public Map<String, Integer> getSymptomsCount(List<String> nameOfSymptoms) {
 
     	if (nameOfSymptoms != null && !nameOfSymptoms.isEmpty()) {
-			Collections.sort(nameOfSymptoms);
+		
 
 			for (String symptom : nameOfSymptoms) {
 				symptomsCount.put(symptom, symptomsCount.containsKey(symptom) ? symptomsCount.get(symptom) + 1 : 1);
