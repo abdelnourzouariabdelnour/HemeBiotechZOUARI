@@ -8,7 +8,7 @@ import java.util.TreeMap;
 
 /**
  * This class is used to read the list of symptoms in the ReadSymptomDataFromFile 
- * class to create a tree structure of type <String, Integer> 
+ * class to create a tree structure of type String, Integer
  * in order to be able to count the number of occurrences
  * of each symptom and to classify them in alphabetical order
  * 
