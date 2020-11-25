@@ -13,7 +13,7 @@ public interface ISymptomWriter {
 	
 	/**
 	 * 
-	 * @param symptomsCount
+	 * @param symptomsCount permet de calculer le nombre d'occurence
 	 */
       void writeSymptomsInFile(Map<String, Integer> symptomsCount);
 

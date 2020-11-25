@@ -14,10 +14,10 @@ import java.util.Map;
 public interface ISymptomCount {
 	/**
 	 * 
-	 * @param nameOfSymptoms
-	 * @return Map<String, Integer>
+	 * @param nameOfSymptoms les noms des symptomes
+	 * @return Map String, Integer
 	 */
 	
-	 Map<String, Integer> getsymptomsCount(List<String> nameOfSymptoms);
+	 Map<String, Integer> getSymptomsCount(List<String> nameOfSymptoms);
 
 }

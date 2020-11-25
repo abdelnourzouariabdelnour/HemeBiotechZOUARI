@@ -8,7 +8,7 @@ import java.util.TreeMap;
 
 /**
  * This class is used to read the list of symptoms in the ReadSymptomDataFromFile 
- * class to create a tree structure of type <String, Integer> 
+ * class to create a tree structure of type String, Integer
  * in order to be able to count the number of occurrences
  * of each symptom and to classify them in alphabetical order
  * 
@@ -29,10 +29,10 @@ public class SymptomsCount implements ISymptomCount {
 	 * 
 	 */
 
-    public Map<String, Integer> getsymptomsCount(List<String> nameOfSymptoms) {
+    public Map<String, Integer> getSymptomsCount(List<String> nameOfSymptoms) {
 
     	if (nameOfSymptoms != null && !nameOfSymptoms.isEmpty()) {
-			Collections.sort(nameOfSymptoms);
+		
 
 			for (String symptom : nameOfSymptoms) {
 				symptomsCount.put(symptom, symptomsCount.containsKey(symptom) ? symptomsCount.get(symptom) + 1 : 1);

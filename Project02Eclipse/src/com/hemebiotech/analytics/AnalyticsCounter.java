@@ -16,12 +16,12 @@ public class AnalyticsCounter {
 		
 
 		
-        ReadSymptomDataFromFile readSymptoms = new ReadSymptomDataFromFile("../Project_DA_Java_EN_Come_to_the_Rescue_of_a_Java_Application/Project02Eclipse/symptoms.txt");         
+        ReadSymptomDataFromFile readSymptoms = new ReadSymptomDataFromFile("../Project02Eclipse/symptoms.txt");         
         List<String> nameOfSymptoms = readSymptoms.getSymptoms();   
         SymptomsCount symptomsCount = new SymptomsCount();
-        Map<String, Integer> SymptomsCount = symptomsCount.getsymptomsCount(nameOfSymptoms);
+        Map<String, Integer> symptomsCounter = symptomsCount.getSymptomsCount(nameOfSymptoms);
         WriteSymptoms writeSymptoms = new WriteSymptoms();
-        writeSymptoms.writeSymptomsInFile(SymptomsCount);
+        writeSymptoms.writeSymptomsInFile(symptomsCounter);
 		
 		
 	
